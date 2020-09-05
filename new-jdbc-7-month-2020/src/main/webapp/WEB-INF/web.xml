@@ -5,6 +5,22 @@
 	version="3.0">
 	<display-name>new jdbc 7 month 2020</display-name>
 
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<!-- nếu không có đoạn filter này thì khi user request 
+	url thì decorators này ko lấy được url đó và phân tích ra -->
+	<!-- request ->URL -> (Bộ lọc) -->
+	
+
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
